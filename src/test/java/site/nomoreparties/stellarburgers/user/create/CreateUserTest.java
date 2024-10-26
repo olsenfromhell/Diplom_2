@@ -27,7 +27,7 @@ public class CreateUserTest {
     @AfterEach
     public void tearDown() {
         if (accessToken != null) {
-            Response response = userActions.deleteUser(accessToken);
+            Response response = UserActions.deleteUser(accessToken);
             response.then()
                     .statusCode(HTTP_ACCEPTED)
                     .and().assertThat()
